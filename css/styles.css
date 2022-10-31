@@ -13,26 +13,102 @@
     --secondary-background-color:#2F303A;
     --secondary-accent-color: #000000;
 }
+/*Reset Start*/
+h1,h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+.link a {
+    text-decoration: none;
+    color: currentColor;
+}
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
+}
+img{
+    display: block;
+}
+.button{
+    display: inline-block;
+}
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+  /*reset end*/
+
+  /*container*/
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato; 
+    
+  }
+  .container.main-nav {
+    border-bottom: 1px solid #ECECEC;
+  }
 body{
     background-color:var(--primary-background-color);
     color: var(--secondary-text-color);
     font-family: 'Roboto', sans-serif ;
     letter-spacing: 0.03em;
 }
+.container.main-nav,
+.footer > .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*logo*/
 .logo{
     color: var(--secondary-accent-color);
     font-family: 'Raleway', sans-serif ;
-   font-weight: 700;
-   font-size: 26px;
-   line-height: calc(31/26);
-   text-decoration: none;
-
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31/26);
+    text-decoration: none;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+ 
 }
+
 /*site-nav*/
 .site-nav-list{
     list-style: none;
 }
+.site-nav,
+.contacts-list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.site-nav {
+    margin-left: 15px;
+  }
+  .contacts-list{
+    margin-left: auto;
+  }
+  .site-nav-list .item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .contacts-list .item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .site-nav-list{
+    display: flex;
+    padding-left: 93px;
+  }
+  .site-nav.link{
+     padding-top: 32px;
+    padding-bottom: 32px;
+   
+  }
 .site-nav-list .link {
     color: var(--primary-text-color);
     font-weight: 500;
@@ -40,7 +116,7 @@ body{
     line-height: calc(16/14);
     letter-spacing: 0.02em;
     text-decoration: none;
-   
+    
 }
 .site-nav-list .link:hover,
 .site-nav-list .link:focus
@@ -48,6 +124,7 @@ body{
     color: var(--accent-color);
    
 }
+
 
 /*contacts */
 .contacts-list .link{
@@ -57,6 +134,9 @@ body{
     line-height: calc(16/14);
     letter-spacing: 0.02em;
     text-decoration: none;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
  }
  .contacts-list{
@@ -68,20 +148,28 @@ body{
     color: var(--accent-color) ;
     
 }
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 /*hero*/
 .hero{
     background-color: var(--secondary-background-color);
-    
+    text-align: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
 }
+   
 .hero-title {
     color: var(--contacts-text-color);
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60/44);
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
+    margin-bottom: 30px; 
+  
 }
 .order-button{
     background-color: var(--accent-color);
@@ -91,9 +179,11 @@ body{
     font-size: 16px;
     line-height: calc(30/16);
     cursor: pointer;
-    border-style: none;
     letter-spacing: 0.06em;
-
+    border-radius: 4px;
+    padding: 10px 32px; 
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
+  
 }
 .order-button:hover, 
 .order-button:focus {
@@ -102,37 +192,51 @@ body{
 }
 .order-button:active{
     color: #188CE8;
+    
 }
 
 /*Company Credo Section*/
 .title-list{
     list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 .section-title{
     
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: calc(16/14);
+  margin-bottom: 10px;
  
 }
 .section-description{
     color: var(--secondary-text-color);
     font-size: 14px;
     line-height: calc(24/14);
+    
 }
-
+ .credo-item:not(:last-child) {
+    margin-right: 30px;
+  }
 /*Work Section*/
 .work-list{
     list-style: none;
+    display: flex;
+    justify-content:space-evenly;
+    padding:0;
+    
 }
 .section-work{
     color: var(--primary-text-color); 
     font-size: 36px;
     line-height: calc(42/36);
     text-align: center;
-   
+    padding-bottom: 50px;
 }
-
+.img:not(:last-child) {
+    margin-right: 30px;
+  }
 /*Team Section*/
 
 .section-galery{
@@ -140,18 +244,30 @@ body{
     font-size: 36px;
     line-height: calc(42/36);
     text-align: center;
-    
+    padding-bottom: 50px;
 }
 .team-list{
     list-style: none;
     background-color: var(--contacts-text-color);
+    display: flex;
+    text-align: center;
+    padding-left: 0;
+}
+.team-img:not(:last-child):not(:last-child) {
+    margin-right: 30px;
+  }
+.team.img{
+  border-style:  0px, 1px
+  rgba(0, 0, 0, 0.12); 
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; 
 }
 .team{
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19/16);
-    text-align: center;
+    
 }
 .position{
     color: var(--secondary-text-color);
@@ -159,12 +275,14 @@ body{
     line-height: calc(19/16);
     text-align: center;
 }
+
 /*Footer Contacts*/
 
 .footer{
   
     background-color: var(--secondary-background-color);
-   
+   padding-top: 60px;
+   padding-bottom: 60px;
 }
 .logo-footer{
     color: var(--contacts-text-color);
@@ -173,7 +291,7 @@ body{
     font-size: 26px;
     line-height: calc(31/26);
     text-decoration: none;
-   
+    padding-bottom: 20px;
 }
 .google-link .link{
     color: var(--contacts-text-color);
@@ -187,18 +305,41 @@ body{
   font-size: 14px;
   line-height: calc(24/14);
   letter-spacing: 0.03em;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 .footer-contact .link{
     color: var(--secondary-contacts-color);
     text-decoration: none;
 }
-
+.footer-list :not(:last-child) {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 9px;
+    
+  }
 
 
 /*Portfolio Section Filters*/
 
 .filter-list{
     list-style: none; 
+    display: flex;
+    padding-left: 315px;
+    padding-right: 8px;
+    padding-bottom: 50px;
+   
+}
+.filter-button{
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ 
+}
+.filter-list{
+    
+  border: 1px solid transparent;
+
 }
 
 .filter-list .button:hover,
@@ -214,11 +355,18 @@ body{
      cursor: pointer;
      background-color: #F5F4FA;
      color: var(--primary-text-color);
-     border-style: none;
+     border-radius: 4px;
+     border: 1px solid transparent;
+     text-align: center;
+     display: inline-block;
+  min-width: 73px;
+  padding: 7px 23px;
  }
  .filter-list .button:active{
     background-color: var(--accent-color);
     color: var(--contacts-text-color) ;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) ;
+
  }
  .visually-hidden {
     position: absolute;
