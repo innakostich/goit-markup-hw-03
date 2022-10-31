@@ -219,12 +219,15 @@ body{
  .credo-item:not(:last-child) {
     margin-right: 30px;
   }
+ 
+  
 /*Work Section*/
 .work-list{
     list-style: none;
     display: flex;
     justify-content:space-evenly;
     padding:0;
+    margin: 0;
     
 }
 .section-work{
@@ -237,6 +240,8 @@ body{
 .img:not(:last-child) {
     margin-right: 30px;
   }
+  
+ 
 /*Team Section*/
 
 .section-galery{
@@ -252,28 +257,37 @@ body{
     display: flex;
     text-align: center;
     padding-left: 0;
+    margin: 0;
 }
-.team-img:not(:last-child):not(:last-child) {
+.team-card:not(:last-child) {
     margin-right: 30px;
   }
-.team.img{
-  border-style:  0px, 1px
-  rgba(0, 0, 0, 0.12); 
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; 
+.team-card{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: none;
+  
 }
 .team{
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19/16);
-    
+    padding-top: 30px;
+    padding-bottom: 10px;
+ 
 }
+
 .position{
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: calc(19/16);
     text-align: center;
+    padding-bottom: 30px;
+    padding-top:10px ;
+}
+.img{
+    padding-bottom: 30px;
 }
 
 /*Footer Contacts*/
@@ -326,21 +340,17 @@ body{
     list-style: none; 
     display: flex;
     padding-left: 315px;
-    padding-right: 8px;
-    padding-bottom: 50px;
-   
+    padding-bottom: 30px;
+    margin: 0;
 }
 .filter-button{
- margin: 0;
- padding: 0;
  text-align: center;
  
 }
-.filter-list{
-    
-  border: 1px solid transparent;
 
-}
+.filter-list :not(:last-child) {
+    margin-right: 8px;
+  }
 
 .filter-list .button:hover,
 .filter-list .button:focus{
@@ -359,8 +369,8 @@ body{
      border: 1px solid transparent;
      text-align: center;
      display: inline-block;
-  min-width: 73px;
-  padding: 7px 23px;
+     min-width: 73px;
+     padding: 7px 23px;
  }
  .filter-list .button:active{
     background-color: var(--accent-color);
@@ -383,17 +393,49 @@ body{
 /*Portfolio Gallery*/
 
 .portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
-}
+    margin: 0;
+    padding-left: 0;
+    gap: 30px;
+  
+  }
+  .portfolio-list .item {
+    
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .project .item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+  .project .item:nth-child(3n) {
+    margin-right: 0;
+
+  }
+
 .gallery-description{
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: calc(30/16);
     letter-spacing: 0.03em;
+    padding-top: 4px;
+    padding-bottom: 18px;
 }
+
 .portfolio-gallery{
     color: var(--primary-text-color);
     font-size: 18px;
     line-height: calc(36/18);
     letter-spacing: 0.06em;
+    padding-top: 18px;
+    padding-bottom: 4px;
 }
+.project {
+    max-width: 370px;
+    max-height: 404px;
+    border-radius: 4px;
+    border: 1px solid #EEEEEE;
+   
+}
+
