@@ -342,10 +342,13 @@ body{
     padding-left: 315px;
     padding-bottom: 30px;
     margin: 0;
+    
 }
 .filter-button{
  text-align: center;
- 
+ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+ border-radius: 4px;
+ border: none;
 }
 
 .filter-list :not(:last-child) {
