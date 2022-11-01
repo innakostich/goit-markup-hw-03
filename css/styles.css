@@ -35,7 +35,7 @@ img{
 }
 .section {
     padding-bottom: 94px;
-    padding-top: 94px;
+    
 }
 
   /*reset end*/
@@ -50,11 +50,11 @@ img{
    
     
   }
-  .container.main-nav {
+  .main-nav {
     border-bottom: 1px solid #ECECEC;
   }
 body{
-    background-color:var(--primary-background-color);
+   
     color: var(--secondary-text-color);
     font-family: 'Roboto', sans-serif ;
     letter-spacing: 0.03em;
@@ -88,9 +88,7 @@ body{
   align-items: center;
   list-style: none;
 }
-.site-nav {
-    margin-left: 15px;
-  }
+
   .contacts-list{
     margin-left: auto;
   }
@@ -102,7 +100,7 @@ body{
   }
   .site-nav-list{
     display: flex;
-    padding-left: 93px;
+    margin-left: 93px;
   }
   .site-nav.link{
      padding-top: 32px;
@@ -135,12 +133,13 @@ body{
     letter-spacing: 0.02em;
     text-decoration: none;
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     
  }
  .contacts-list{
     list-style: none;
+    padding:0;
  }
 .contacts-list .link:hover,
 .contacts-list .link:focus 
@@ -160,7 +159,9 @@ body{
     padding-bottom: 200px;
     padding-top: 200px;
 }
-   
+ .hero section{
+   padding-bottom: 94px;
+ }
 .hero-title {
     color: var(--contacts-text-color);
     font-weight: 900;
@@ -230,15 +231,19 @@ body{
     margin: 0;
     
 }
+
 .section-work{
     color: var(--primary-text-color); 
     font-size: 36px;
     line-height: calc(42/36);
     text-align: center;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
-.img:not(:last-child) {
+.img-list:not(:last-child) {
     margin-right: 30px;
+  }
+  .img-list{
+    padding-bottom: 0;
   }
   
  
@@ -249,7 +254,7 @@ body{
     font-size: 36px;
     line-height: calc(42/36);
     text-align: center;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 .team-list{
     list-style: none;
@@ -268,7 +273,7 @@ body{
     border: none;
   
 }
-.team{
+.team-subtitle{
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -339,9 +344,10 @@ body{
 .filter-list{
     list-style: none; 
     display: flex;
-    padding-left: 315px;
-    padding-bottom: 30px;
-    margin: 0;
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding-left: 0;
+    justify-content: center;
     
 }
 .filter-button{
@@ -361,7 +367,7 @@ body{
 }
 .filter-list .button{
      font-family: inherit;
-     font: weight 500px;
+     font-weight: 500px;
      font-size: 16px;
      line-height: calc(26/16);
      cursor: pointer;
@@ -393,6 +399,9 @@ body{
      margin: -1px;
    }
 /*Portfolio Gallery*/
+.section.portfolio{
+  padding-top: 94px;
+}
 
 .portfolio-list{
     display: flex;
@@ -433,11 +442,14 @@ body{
     padding-top: 18px;
     padding-bottom: 4px;
 }
-.project {
+.project-title {
     max-width: 370px;
-    max-height: 404px;
     border-radius: 4px;
     border: 1px solid #EEEEEE;
    
+}
+.project{
+    max-width: 370px;
+  
 }
 
