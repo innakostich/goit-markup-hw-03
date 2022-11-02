@@ -37,7 +37,7 @@ img{
     padding-bottom: 94px;
     
 }
-.section.portfolio, .section-credo, .section-credo {
+.section.portfolio, .section-credo, .section.team {
   padding-top: 94px;
 }
 
@@ -284,7 +284,7 @@ body{
     border: none;
   
 }
-.team-subtitle{
+.subtitle{
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -292,7 +292,7 @@ body{
     margin-bottom: 10px;
  
 }
-.team{
+.team-box{
   padding-top: 30px;
   padding-bottom: 30px;
 }
